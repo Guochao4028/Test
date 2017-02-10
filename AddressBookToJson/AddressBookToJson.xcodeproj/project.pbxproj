@@ -427,6 +427,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8W659AS3G4;
 				INFOPLIST_FILE = AddressBookToJson/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.real.AddressBookToJson;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -439,6 +440,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8W659AS3G4;
 				INFOPLIST_FILE = AddressBookToJson/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.real.AddressBookToJson;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -514,6 +516,7 @@
 				0B19E7D21E4D994200BC75AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0B19E7D31E4D994200BC75AC /* Build configuration list for PBXNativeTarget "AddressBookToJsonTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +525,7 @@
 				0B19E7D51E4D994200BC75AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0B19E7D61E4D994200BC75AC /* Build configuration list for PBXNativeTarget "AddressBookToJsonUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +534,7 @@
 				0B19E7D81E4D994200BC75AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
