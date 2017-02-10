@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0B19E7A81E4D994200BC75AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19E7A71E4D994200BC75AC /* main.m */; };
+		0B19E7AB1E4D994200BC75AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19E7AA1E4D994200BC75AC /* AppDelegate.m */; };
+		0B19E7AE1E4D994200BC75AC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19E7AD1E4D994200BC75AC /* ViewController.m */; };
+		0B19E7B11E4D994200BC75AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B19E7AF1E4D994200BC75AC /* Main.storyboard */; };
+		0B19E7B31E4D994200BC75AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B19E7B21E4D994200BC75AC /* Assets.xcassets */; };
+		0B19E7B61E4D994200BC75AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B19E7B41E4D994200BC75AC /* LaunchScreen.storyboard */; };
+		0B19E7C11E4D994200BC75AC /* AddressBookToJsonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19E7C01E4D994200BC75AC /* AddressBookToJsonTests.m */; };
+		0B19E7CC1E4D994200BC75AC /* AddressBookToJsonUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19E7CB1E4D994200BC75AC /* AddressBookToJsonUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0B19E7BD1E4D994200BC75AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B19E79B1E4D994200BC75AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B19E7A21E4D994200BC75AC;
+			remoteInfo = AddressBookToJson;
+		};
+		0B19E7C81E4D994200BC75AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B19E79B1E4D994200BC75AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B19E7A21E4D994200BC75AC;
+			remoteInfo = AddressBookToJson;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0B19E7A31E4D994200BC75AC /* AddressBookToJson.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AddressBookToJson.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B19E7A71E4D994200BC75AC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0B19E7A91E4D994200BC75AC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0B19E7AA1E4D994200BC75AC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0B19E7AC1E4D994200BC75AC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		0B19E7AD1E4D994200BC75AC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0B19E7B01E4D994200BC75AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0B19E7B21E4D994200BC75AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0B19E7B51E4D994200BC75AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0B19E7B71E4D994200BC75AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B19E7BC1E4D994200BC75AC /* AddressBookToJsonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AddressBookToJsonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B19E7C01E4D994200BC75AC /* AddressBookToJsonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressBookToJsonTests.m; sourceTree = "<group>"; };
+		0B19E7C21E4D994200BC75AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B19E7C71E4D994200BC75AC /* AddressBookToJsonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AddressBookToJsonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B19E7CB1E4D994200BC75AC /* AddressBookToJsonUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressBookToJsonUITests.m; sourceTree = "<group>"; };
+		0B19E7CD1E4D994200BC75AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0B19E7A01E4D994200BC75AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B19E7B91E4D994200BC75AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B19E7C41E4D994200BC75AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0B19E79A1E4D994200BC75AC = {
+			isa = PBXGroup;
+			children = (
+				0B19E7A51E4D994200BC75AC /* AddressBookToJson */,
+				0B19E7BF1E4D994200BC75AC /* AddressBookToJsonTests */,
+				0B19E7CA1E4D994200BC75AC /* AddressBookToJsonUITests */,
+				0B19E7A41E4D994200BC75AC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0B19E7A41E4D994200BC75AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0B19E7A31E4D994200BC75AC /* AddressBookToJson.app */,
+				0B19E7BC1E4D994200BC75AC /* AddressBookToJsonTests.xctest */,
+				0B19E7C71E4D994200BC75AC /* AddressBookToJsonUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0B19E7A51E4D994200BC75AC /* AddressBookToJson */ = {
+			isa = PBXGroup;
+			children = (
+				0B19E7A91E4D994200BC75AC /* AppDelegate.h */,
+				0B19E7AA1E4D994200BC75AC /* AppDelegate.m */,
+				0B19E7AC1E4D994200BC75AC /* ViewController.h */,
+				0B19E7AD1E4D994200BC75AC /* ViewController.m */,
+				0B19E7AF1E4D994200BC75AC /* Main.storyboard */,
+				0B19E7B21E4D994200BC75AC /* Assets.xcassets */,
+				0B19E7B41E4D994200BC75AC /* LaunchScreen.storyboard */,
+				0B19E7B71E4D994200BC75AC /* Info.plist */,
+				0B19E7A61E4D994200BC75AC /* Supporting Files */,
+			);
+			path = AddressBookToJson;
+			sourceTree = "<group>";
+		};
+		0B19E7A61E4D994200BC75AC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0B19E7A71E4D994200BC75AC /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0B19E7BF1E4D994200BC75AC /* AddressBookToJsonTests */ = {
+			isa = PBXGroup;
+			children = (
+				0B19E7C01E4D994200BC75AC /* AddressBookToJsonTests.m */,
+				0B19E7C21E4D994200BC75AC /* Info.plist */,
+			);
+			path = AddressBookToJsonTests;
+			sourceTree = "<group>";
+		};
+		0B19E7CA1E4D994200BC75AC /* AddressBookToJsonUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0B19E7CB1E4D994200BC75AC /* AddressBookToJsonUITests.m */,
+				0B19E7CD1E4D994200BC75AC /* Info.plist */,
+			);
+			path = AddressBookToJsonUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0B19E7A21E4D994200BC75AC /* AddressBookToJson */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B19E7D01E4D994200BC75AC /* Build configuration list for PBXNativeTarget "AddressBookToJson" */;
+			buildPhases = (
+				0B19E79F1E4D994200BC75AC /* Sources */,
+				0B19E7A01E4D994200BC75AC /* Frameworks */,
+				0B19E7A11E4D994200BC75AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AddressBookToJson;
+			productName = AddressBookToJson;
+			productReference = 0B19E7A31E4D994200BC75AC /* AddressBookToJson.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0B19E7BB1E4D994200BC75AC /* AddressBookToJsonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B19E7D31E4D994200BC75AC /* Build configuration list for PBXNativeTarget "AddressBookToJsonTests" */;
+			buildPhases = (
+				0B19E7B81E4D994200BC75AC /* Sources */,
+				0B19E7B91E4D994200BC75AC /* Frameworks */,
+				0B19E7BA1E4D994200BC75AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0B19E7BE1E4D994200BC75AC /* PBXTargetDependency */,
+			);
+			name = AddressBookToJsonTests;
+			productName = AddressBookToJsonTests;
+			productReference = 0B19E7BC1E4D994200BC75AC /* AddressBookToJsonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0B19E7C61E4D994200BC75AC /* AddressBookToJsonUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B19E7D61E4D994200BC75AC /* Build configuration list for PBXNativeTarget "AddressBookToJsonUITests" */;
+			buildPhases = (
+				0B19E7C31E4D994200BC75AC /* Sources */,
+				0B19E7C41E4D994200BC75AC /* Frameworks */,
+				0B19E7C51E4D994200BC75AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0B19E7C91E4D994200BC75AC /* PBXTargetDependency */,
+			);
+			name = AddressBookToJsonUITests;
+			productName = AddressBookToJsonUITests;
+			productReference = 0B19E7C71E4D994200BC75AC /* AddressBookToJsonUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0B19E79B1E4D994200BC75AC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "真的网络科技公司";
+				TargetAttributes = {
+					0B19E7A21E4D994200BC75AC = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 8W659AS3G4;
+						ProvisioningStyle = Automatic;
+					};
+					0B19E7BB1E4D994200BC75AC = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 8W659AS3G4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0B19E7A21E4D994200BC75AC;
+					};
+					0B19E7C61E4D994200BC75AC = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 8W659AS3G4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0B19E7A21E4D994200BC75AC;
+					};
+				};
+			};
+			buildConfigurationList = 0B19E79E1E4D994200BC75AC /* Build configuration list for PBXProject "AddressBookToJson" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0B19E79A1E4D994200BC75AC;
+			productRefGroup = 0B19E7A41E4D994200BC75AC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0B19E7A21E4D994200BC75AC /* AddressBookToJson */,
+				0B19E7BB1E4D994200BC75AC /* AddressBookToJsonTests */,
+				0B19E7C61E4D994200BC75AC /* AddressBookToJsonUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0B19E7A11E4D994200BC75AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B19E7B61E4D994200BC75AC /* LaunchScreen.storyboard in Resources */,
+				0B19E7B31E4D994200BC75AC /* Assets.xcassets in Resources */,
+				0B19E7B11E4D994200BC75AC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B19E7BA1E4D994200BC75AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B19E7C51E4D994200BC75AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0B19E79F1E4D994200BC75AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B19E7AE1E4D994200BC75AC /* ViewController.m in Sources */,
+				0B19E7AB1E4D994200BC75AC /* AppDelegate.m in Sources */,
+				0B19E7A81E4D994200BC75AC /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B19E7B81E4D994200BC75AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B19E7C11E4D994200BC75AC /* AddressBookToJsonTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B19E7C31E4D994200BC75AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B19E7CC1E4D994200BC75AC /* AddressBookToJsonUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0B19E7BE1E4D994200BC75AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0B19E7A21E4D994200BC75AC /* AddressBookToJson */;
+			targetProxy = 0B19E7BD1E4D994200BC75AC /* PBXContainerItemProxy */;
+		};
+		0B19E7C91E4D994200BC75AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0B19E7A21E4D994200BC75AC /* AddressBookToJson */;
+			targetProxy = 0B19E7C81E4D994200BC75AC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0B19E7AF1E4D994200BC75AC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0B19E7B01E4D994200BC75AC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0B19E7B41E4D994200BC75AC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0B19E7B51E4D994200BC75AC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0B19E7CE1E4D994200BC75AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0B19E7CF1E4D994200BC75AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0B19E7D11E4D994200BC75AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8W659AS3G4;
+				INFOPLIST_FILE = AddressBookToJson/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.real.AddressBookToJson;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0B19E7D21E4D994200BC75AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8W659AS3G4;
+				INFOPLIST_FILE = AddressBookToJson/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.real.AddressBookToJson;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		0B19E7D41E4D994200BC75AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 8W659AS3G4;
+				INFOPLIST_FILE = AddressBookToJsonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.real.AddressBookToJsonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AddressBookToJson.app/AddressBookToJson";
+			};
+			name = Debug;
+		};
+		0B19E7D51E4D994200BC75AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 8W659AS3G4;
+				INFOPLIST_FILE = AddressBookToJsonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.real.AddressBookToJsonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AddressBookToJson.app/AddressBookToJson";
+			};
+			name = Release;
+		};
+		0B19E7D71E4D994200BC75AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 8W659AS3G4;
+				INFOPLIST_FILE = AddressBookToJsonUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.real.AddressBookToJsonUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = AddressBookToJson;
+			};
+			name = Debug;
+		};
+		0B19E7D81E4D994200BC75AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 8W659AS3G4;
+				INFOPLIST_FILE = AddressBookToJsonUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.real.AddressBookToJsonUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = AddressBookToJson;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0B19E79E1E4D994200BC75AC /* Build configuration list for PBXProject "AddressBookToJson" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B19E7CE1E4D994200BC75AC /* Debug */,
+				0B19E7CF1E4D994200BC75AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0B19E7D01E4D994200BC75AC /* Build configuration list for PBXNativeTarget "AddressBookToJson" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B19E7D11E4D994200BC75AC /* Debug */,
+				0B19E7D21E4D994200BC75AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0B19E7D31E4D994200BC75AC /* Build configuration list for PBXNativeTarget "AddressBookToJsonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B19E7D41E4D994200BC75AC /* Debug */,
+				0B19E7D51E4D994200BC75AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0B19E7D61E4D994200BC75AC /* Build configuration list for PBXNativeTarget "AddressBookToJsonUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B19E7D71E4D994200BC75AC /* Debug */,
+				0B19E7D81E4D994200BC75AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0B19E79B1E4D994200BC75AC /* Project object */;
+}
