@@ -10,8 +10,17 @@
 
 
 #import "ViewController.h"
-#import <AddressBook/AddressBook.h>
+
+#define KCurrentDevice [UIDevice currentDevice].systemVersion
+
+#if  __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_9_0 
 #import <Contacts/Contacts.h>
+#else
+#import <AddressBook/AddressBook.h>
+#endif
+
+
+
 
 @interface AddressBookPeople : NSObject
 
@@ -33,7 +42,12 @@
 
 @interface ViewController (){
 
+#if  __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_9_0
+    CNContactStore *_addressBook;
+#else
     ABAddressBookRef addressBookRef;
+#endif
+    
 }
 
 - (IBAction)addressBookToJsonAction:(id)sender;
@@ -77,6 +91,18 @@
 /*  权限注册 */
 -(BOOL)permissionRegister{
 
+    
+#if  __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_9_0
+    // 1.获取授权状态
+    CNAuthorizationStatus status = [CNContactStore authorizationStatusForEntityType:CNEntityTypeContacts];
+    // 2.判断授权状态,如果不是已经授权,则直接返回
+    if (status != CNAuthorizationStatusAuthorized){
+        return NO;
+    }else{
+        return YES;
+    }
+    
+#else
     //这个变量用于记录授权是否成功，即用户是否允许我们访问通讯录
     BOOL __block tip = NO;
     //声明一个通讯簿的引用
@@ -104,14 +130,48 @@
     }
     
     return tip;
+#endif
+    
 }
 
 /*  通讯录联系人详细信息 */
 -(NSArray *)AddressBookContactDetails{
     
-    
-    
     NSMutableArray *tempStore = [NSMutableArray array];
+#if  __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_9_0
+    _addressBook = [[CNContactStore alloc]init];
+    
+    // 4.创建获取通信录的请求对象
+    // 4.1.拿到所有打算获取的属性对应的key
+    NSArray *keys = @[CNContactGivenNameKey, CNContactFamilyNameKey, CNContactPhoneNumbersKey];
+    
+    // 4.2.创建CNContactFetchRequest对象
+    CNContactFetchRequest *request = [[CNContactFetchRequest alloc] initWithKeysToFetch:keys];
+    
+    // 5.遍历所有的联系人
+    [_addressBook enumerateContactsWithFetchRequest:request error:nil usingBlock:^(CNContact * _Nonnull contact, BOOL * _Nonnull stop) {
+        // 1.获取联系人的姓名
+        NSString *lastname = contact.familyName;
+        NSString *firstname = contact.givenName;
+        NSLog(@"%@ %@", lastname, firstname);
+        
+        // 2.获取联系人的电话号码
+        NSArray *phoneNums = contact.phoneNumbers;
+        for (CNLabeledValue *labeledValue in phoneNums) {
+            // 2.1.获取电话号码的KEY
+            NSString *phoneLabel = labeledValue.label;
+            
+            // 2.2.获取电话号码
+            CNPhoneNumber *phoneNumer = labeledValue.value;
+            NSString *phoneValue = phoneNumer.stringValue;
+            
+            NSLog(@"%@ %@", phoneLabel, phoneValue);
+        }
+    }];
+    
+    return nil;
+    
+#else
     
     //获取所有联系人的数组
     CFArrayRef allLinkPeople = ABAddressBookCopyArrayOfAllPeople(addressBookRef);
@@ -156,6 +216,7 @@
     NSArray *addressBookModelArray = [NSArray arrayWithArray:tempStore];
     
     return addressBookModelArray;
+#endif
 }
 
 /*  将通信录信息转成json */
