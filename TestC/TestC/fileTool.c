@@ -7,10 +7,8 @@
 //
 
 #include "fileTool.h"
-#include <sys/stat.h>
 #include "string.h"
 #include <stdlib.h>
-#include <unistd.h>
 
 int charLn(const char *content);
 int getFileSize(const char *fileName);
@@ -23,7 +21,15 @@ int createFile(const char *fileName, const char *content){
     fp = fopen(fileName, "w");
     if(fp != NULL)results = 1;
     if (content != NULL && fp != NULL) {
-        fwrite(content, (sizeof(char) * strlen(content)), 1, fp);
+        //向文件写内容
+        //strlen(content) 内容的长度
+        //sizeof(char) 一个字符的长度
+        
+        //向文件 写入 content  ，总长度(sizeof(char) * strlen(content)) 写1次
+//        fwrite(content, (sizeof(char) * strlen(content)), 1, fp);
+        
+        //向文件 写入 content  ，总长度sizeof(char) 写strlen(content)次
+        fwrite(content, sizeof(char), strlen(content), fp);
         results = 1;
     }
     fclose(fp);
@@ -56,11 +62,13 @@ int readFileContent(const char *fileName){
     char a[1024] = {'s','a','y',' '};
     int j = 0;
     int k = 4;
+    // 往 a 数组里加 字符
     while (buf[j] != '\0') {
         a[k] = buf[j];
         j++;
         k++;
     }
+    //传个 以 “say ”开头的就可以让机器出声了
     system(a);
     return 1;
 }
