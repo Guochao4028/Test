@@ -15,7 +15,7 @@
 		0B491DB21F0DDE0500A6C804 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B491DB01F0DDE0500A6C804 /* LaunchScreen.storyboard */; };
 		0B491DBD1F0DDE0500A6C804 /* TestPassWordInputTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B491DBC1F0DDE0500A6C804 /* TestPassWordInputTests.m */; };
 		0B491DC81F0DDE0500A6C804 /* TestPassWordInputUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B491DC71F0DDE0500A6C804 /* TestPassWordInputUITests.m */; };
-		0B491DD71F0DDE9300A6C804 /* PassWordField.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B491DD61F0DDE9300A6C804 /* PassWordField.m */; };
+		0B491DD71F0DDE9300A6C804 /* PasswordField.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B491DD61F0DDE9300A6C804 /* PasswordField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +52,8 @@
 		0B491DC31F0DDE0500A6C804 /* TestPassWordInputUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestPassWordInputUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B491DC71F0DDE0500A6C804 /* TestPassWordInputUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestPassWordInputUITests.m; sourceTree = "<group>"; };
 		0B491DC91F0DDE0500A6C804 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0B491DD51F0DDE9300A6C804 /* PassWordField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassWordField.h; sourceTree = "<group>"; };
-		0B491DD61F0DDE9300A6C804 /* PassWordField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassWordField.m; sourceTree = "<group>"; };
+		0B491DD51F0DDE9300A6C804 /* PasswordField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordField.h; sourceTree = "<group>"; };
+		0B491DD61F0DDE9300A6C804 /* PasswordField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +113,8 @@
 				0B491DB01F0DDE0500A6C804 /* LaunchScreen.storyboard */,
 				0B491DB31F0DDE0500A6C804 /* Info.plist */,
 				0B491DA21F0DDE0500A6C804 /* Supporting Files */,
-				0B491DD51F0DDE9300A6C804 /* PassWordField.h */,
-				0B491DD61F0DDE9300A6C804 /* PassWordField.m */,
+				0B491DD51F0DDE9300A6C804 /* PasswordField.h */,
+				0B491DD61F0DDE9300A6C804 /* PasswordField.m */,
 			);
 			path = TestPassWordInput;
 			sourceTree = "<group>";
@@ -279,7 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B491DAA1F0DDE0500A6C804 /* ViewController.m in Sources */,
-				0B491DD71F0DDE9300A6C804 /* PassWordField.m in Sources */,
+				0B491DD71F0DDE9300A6C804 /* PasswordField.m in Sources */,
 				0B491DA71F0DDE0500A6C804 /* AppDelegate.m in Sources */,
 				0B491DA41F0DDE0500A6C804 /* main.m in Sources */,
 			);

@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 
+#import "PassWordField.h"
+
 @interface ViewController ()
 
 @end
@@ -17,6 +19,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    PassWordField *a = [[PassWordField alloc]initWithFrame:CGRectMake(14, 100, 280, 60)];
+    [self.view addSubview:a];
+    
+//    [a setBackgroundColor:[UIColor redColor]];
+    
+    [a becomeResponderViewKeyboard];
+    
 }
 
 
