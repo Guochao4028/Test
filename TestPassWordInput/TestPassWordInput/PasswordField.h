@@ -10,15 +10,18 @@
 
 @class PasswordField;
 
-@protocol PassWordFieldDelegate <NSObject>
+@protocol PasswordFieldDelegate <NSObject>
 
 @optional
--(void)passWordField:(PasswordField *)passWordField passWord:(NSString *)passWordString;
+-(void)passwordField:(PasswordField *)passwordField password:(NSString *)passwordString;
+
 
 @end
 
 
 @interface PasswordField : UIView
+
+@property(nonatomic, weak)id<PasswordFieldDelegate>delegate;
 
 -(void)becomeResponderViewKeyboard;
 -(void)resignResponderViewKeyboard;

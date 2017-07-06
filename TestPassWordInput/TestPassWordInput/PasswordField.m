@@ -37,8 +37,6 @@
 
 #pragma mark - UITextFieldDelegate
 
-
-
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     
     if (textField.text.length >= kDotCount && string.length) {
@@ -53,21 +51,22 @@
     NSString *totalString;
     if (string.length <= 0) {
         totalString = [textField.text substringToIndex:textField.text.length-1];
+        if ([self.delegate respondsToSelector:@selector(passwordField:password:)] == YES) {
+            [self.delegate passwordField:self password:totalString];
+        }
     }
     else {
         totalString = [NSString stringWithFormat:@"%@%@",textField.text,string];
     }
     [self setDotWithCount:totalString.length];
-    
-    NSLog(@"_____total %@",totalString);
-//    if (totalString.length == 6) {
-//        if (_completeHandle) {
-//            _completeHandle(totalString);
-//        }
-//        [self performSelector:@selector(dismiss) withObject:nil afterDelay:.3f];
-//        NSLog(@"complete");
-//    }
-    
+    if (totalString.length == 6) {
+
+        if ([self.delegate respondsToSelector:@selector(passwordField:password:)] == YES) {
+            [self.delegate passwordField:self password:totalString];
+        }
+        
+    }
+
     return YES;
 }
 
@@ -81,21 +80,6 @@
         ((UILabel*)[self.pwdIndicatorArr objectAtIndex:i]).hidden = NO;
     }
 }
-///**
-// *  重置显示的点
-// */
-//- (void)textFieldDidChange:(UITextField *)textField{
-//    NSLog(@"%@", textField.text);
-//    for (UIView *dotView in self.pwdIndicatorArr) {
-//        dotView.hidden = YES;
-//    }
-//    for (int i = 0; i < textField.text.length; i++) {
-//        ((UIView *)[self.pwdIndicatorArr objectAtIndex:i]).hidden = NO;
-//    }
-//    if (textField.text.length == kDotCount) {
-//        NSLog(@"输入完毕");
-//    }
-//}
 
 #pragma mark - methods
 
