@@ -6,17 +6,17 @@
 //  Copyright © 2017年 GuoChao. All rights reserved.
 //
 
-#import "PasswordField.h"
+#import "PasswordFieldView.h"
 #define kDotCount 6  //密码个数
 
-@interface PasswordField ()<UITextFieldDelegate>
+@interface PasswordFieldView ()<UITextFieldDelegate>
 
 @property(nonatomic)NSMutableArray *pwdIndicatorArr;
 @property(nonatomic, strong) UITextField *textField;
 @property(nonatomic)CGFloat itemWidth;
 @end
 
-@implementation PasswordField
+@implementation PasswordFieldView
 
 -(instancetype)init{
     return [self initWithFrame:CGRectZero];

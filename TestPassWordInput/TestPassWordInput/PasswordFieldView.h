@@ -8,20 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
-@class PasswordField;
+@class PasswordFieldView;
 
-@protocol PasswordFieldDelegate <NSObject>
+@protocol PasswordFieldViewDelegate <NSObject>
 
 @optional
--(void)passwordField:(PasswordField *)passwordField password:(NSString *)passwordString;
+-(void)passwordField:(PasswordFieldView *)passwordField password:(NSString *)passwordString;
 
 
 @end
 
 
-@interface PasswordField : UIView
+@interface PasswordFieldView : UIView
 
-@property(nonatomic, weak)id<PasswordFieldDelegate>delegate;
+@property(nonatomic, weak)id<PasswordFieldViewDelegate>delegate;
 
 -(void)becomeResponderViewKeyboard;
 -(void)resignResponderViewKeyboard;

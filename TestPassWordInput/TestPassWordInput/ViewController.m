@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-#import "PasswordField.h"
+#import "PasswordFieldView.h"
 
 @interface ViewController ()<PasswordFieldDelegate>
 
@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    PasswordField *passwordField = [[PasswordField alloc]initWithFrame:CGRectMake(14, 100, 280, 60)];
+    PasswordFieldView *passwordField = [[PasswordFieldView alloc]initWithFrame:CGRectMake(14, 100, 280, 60)];
     [self.view addSubview:passwordField];
     
     
@@ -29,7 +29,7 @@
 }
 
 
--(void)passwordField:(PasswordField *)passwordField password:(NSString *)passwordString{
+-(void)passwordField:(PasswordFieldView *)passwordField password:(NSString *)passwordString{
 
     NSLog(@"passwordSting : %@", passwordString);
 //    [passwordField resignResponderViewKeyboard];
