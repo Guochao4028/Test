@@ -51,8 +51,8 @@
     NSString *totalString;
     if (string.length <= 0) {
         totalString = [textField.text substringToIndex:textField.text.length-1];
-        if ([self.delegate respondsToSelector:@selector(passwordField:password:)] == YES) {
-            [self.delegate passwordField:self password:totalString];
+        if ([self.delegate respondsToSelector:@selector(passwordField:didChange:)] == YES) {
+            [self.delegate passwordField:self didChange:totalString];
         }
     }
     else {

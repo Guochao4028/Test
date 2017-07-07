@@ -13,8 +13,10 @@
 @protocol PasswordFieldViewDelegate <NSObject>
 
 @optional
+
 -(void)passwordField:(PasswordFieldView *)passwordField password:(NSString *)passwordString;
 
+-(void)passwordField:(PasswordFieldView *)passwordField didChange:(NSString *)passwordString;
 
 @end
 

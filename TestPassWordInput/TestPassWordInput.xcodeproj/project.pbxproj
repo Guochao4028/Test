@@ -17,6 +17,7 @@
 		0B491DC81F0DDE0500A6C804 /* TestPassWordInputUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B491DC71F0DDE0500A6C804 /* TestPassWordInputUITests.m */; };
 		0B491DD71F0DDE9300A6C804 /* PasswordFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B491DD61F0DDE9300A6C804 /* PasswordFieldView.m */; };
 		0B491DDA1F0E3C2E00A6C804 /* PasswordAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B491DD91F0E3C2E00A6C804 /* PasswordAlertView.m */; };
+		0B491DDD1F0F2B5D00A6C804 /* PasswordInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B491DDC1F0F2B5D00A6C804 /* PasswordInputView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		0B491DD61F0DDE9300A6C804 /* PasswordFieldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordFieldView.m; sourceTree = "<group>"; };
 		0B491DD81F0E3C2E00A6C804 /* PasswordAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordAlertView.h; sourceTree = "<group>"; };
 		0B491DD91F0E3C2E00A6C804 /* PasswordAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordAlertView.m; sourceTree = "<group>"; };
+		0B491DDB1F0F2B5D00A6C804 /* PasswordInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordInputView.h; sourceTree = "<group>"; };
+		0B491DDC1F0F2B5D00A6C804 /* PasswordInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordInputView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				0B491DA11F0DDE0500A6C804 /* TestPassWordInput */,
-				0B491DBB1F0DDE0500A6C804 /* TestPassWordInputTests */,
 				0B491DC61F0DDE0500A6C804 /* TestPassWordInputUITests */,
 				0B491DA01F0DDE0500A6C804 /* Products */,
 			);
@@ -120,6 +122,9 @@
 				0B491DD61F0DDE9300A6C804 /* PasswordFieldView.m */,
 				0B491DD81F0E3C2E00A6C804 /* PasswordAlertView.h */,
 				0B491DD91F0E3C2E00A6C804 /* PasswordAlertView.m */,
+				0B491DBB1F0DDE0500A6C804 /* TestPassWordInputTests */,
+				0B491DDB1F0F2B5D00A6C804 /* PasswordInputView.h */,
+				0B491DDC1F0F2B5D00A6C804 /* PasswordInputView.m */,
 			);
 			path = TestPassWordInput;
 			sourceTree = "<group>";
@@ -139,7 +144,7 @@
 				0B491DBE1F0DDE0500A6C804 /* Info.plist */,
 			);
 			path = TestPassWordInputTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		0B491DC61F0DDE0500A6C804 /* TestPassWordInputUITests */ = {
 			isa = PBXGroup;
@@ -283,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B491DDD1F0F2B5D00A6C804 /* PasswordInputView.m in Sources */,
 				0B491DAA1F0DDE0500A6C804 /* ViewController.m in Sources */,
 				0B491DD71F0DDE9300A6C804 /* PasswordFieldView.m in Sources */,
 				0B491DA71F0DDE0500A6C804 /* AppDelegate.m in Sources */,

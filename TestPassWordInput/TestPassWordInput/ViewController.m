@@ -10,7 +10,8 @@
 
 #import "PasswordFieldView.h"
 
-@interface ViewController ()<PasswordFieldDelegate>
+@interface ViewController ()<PasswordFieldViewDelegate>
+
 
 @end
 
@@ -33,6 +34,12 @@
 
     NSLog(@"passwordSting : %@", passwordString);
 //    [passwordField resignResponderViewKeyboard];
+}
+
+-(void)passwordField:(PasswordFieldView *)passwordField didChange:(NSString *)passwordString{
+
+
+     NSLog(@"passwordSting : %@", passwordString);
 }
 
 
