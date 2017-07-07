@@ -15,6 +15,7 @@
 @interface PasswordInputView ()<PasswordFieldViewDelegate>
 @property(nonatomic, strong)PasswordFieldView *passwordFieldView;
 @property(nonatomic, strong)UIButton *actionButton;
+@property(nonatomic, copy)NSString *password;
 @end
 
 @implementation PasswordInputView
@@ -54,22 +55,33 @@
 
 #pragma mark - PasswordFieldViewDelegate
 -(void)passwordField:(PasswordFieldView *)passwordField password:(NSString *)passwordString{
-    
-    if (_completeHandle) {
-        _completeHandle(passwordString);
-    }
+    self.password = passwordString;
 }
 
 -(void)passwordField:(PasswordFieldView *)passwordField didChange:(NSString *)passwordString{
 
-
-     NSLog(@"passwordSting : %@", passwordString);
+    self.password = nil;
+    
+    if (passwordString.length <6) {
+        
+         [self.actionButton setBackgroundColor:[UIColor redColor]];
+        
+    }else{
+    
+        [self.actionButton setBackgroundColor:self.buttonBackgroundColor];
+    }
+    
 }
 
 -(void)actionButtonAddTarget:(id)target action:(SEL)action{
     [self.actionButton addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
 }
 
+
+-(NSString *)getPassword{
+
+    return self.password;
+}
 
 
 #pragma mark - setter
@@ -80,7 +92,7 @@
 }
 
 -(void)setButtonBackgroundColor:(UIColor *)buttonBackgroundColor{
-    [self.actionButton setBackgroundColor:buttonBackgroundColor];
+    _buttonBackgroundColor = buttonBackgroundColor;
 }
 
 -(void)setIsViewButton:(BOOL)isViewButton{

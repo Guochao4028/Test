@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+typedef void(^PasswordInputViewBlock)(NSString * _Nullable password);
 NS_ASSUME_NONNULL_BEGIN
 @interface PasswordInputView : UIView
 /*  按钮的标题 */
@@ -15,10 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong)UIColor *buttonBackgroundColor;
 /*  是否显示按钮 */
 @property(nonatomic, assign)BOOL isViewButton;
-/*  回调 */
-@property (nonatomic,copy) void (^completeHandle)(NSString *inputPwd);
 /*  按钮的点击方法 */
 -(void)actionButtonAddTarget:(nullable id)target action:(SEL)action;
 
+-(NSString *)getPassword;
 @end
 NS_ASSUME_NONNULL_END

@@ -26,13 +26,9 @@
     self =  [super initWithFrame:frame];
     if (self != nil) {
         [self initUI];
+        [self initData];
     }
     return self;
-}
-
--(void)setFrame:(CGRect)frame{
-    [super setFrame:frame];
-    self.textField.frame = frame;
 }
 
 #pragma mark - UITextFieldDelegate
@@ -90,29 +86,39 @@
     [self updateUI];
 }
 
+-(void)initData{
+    self.pwdIndicatorArr = [[NSMutableArray alloc] init];
+}
+
+-(void)setFrame:(CGRect)frame{
+    [super setFrame:frame];
+    self.textField.frame = frame;
+    [self updateUI];
+}
+
 -(void)updateUI{
     //每个密码输入框的宽度
     CGFloat width = self.frame.size.width / kDotCount, height = self.frame.size.height;
     
-    //生成分割线
-    for (int i = 0; i < kDotCount - 1; i++) {
-        UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(  (i + 1) * width, 0, 1, height)];
-        lineView.backgroundColor = [UIColor grayColor];
-        [self addSubview:lineView];
-    }
-    
-    self.pwdIndicatorArr = [[NSMutableArray alloc] init];
-    //生成中间的点
-    for (int i = 0; i < kDotCount; i++) {
-        UIView *dotView = [[UIView alloc] initWithFrame:CGRectMake((width - kDotCount) / 2 + i * width, (height - 10) / 2, 10, 10)];
-        dotView.backgroundColor = [UIColor blackColor];
-        dotView.layer.cornerRadius = 10/ 2.0f;
-        dotView.clipsToBounds = YES;
-        dotView.hidden = YES; //先隐藏
-        [self addSubview:dotView];
-        //把创建的黑色点加入到数组中
-        [self.pwdIndicatorArr addObject:dotView];
+    if (width != 0 && height != 0) {
+        //生成分割线
+        for (int i = 0; i < kDotCount - 1; i++) {
+            UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(  (i + 1) * width, 0, 1, height)];
+            lineView.backgroundColor = [UIColor grayColor];
+            [self addSubview:lineView];
+        }
         
+        //生成中间的点
+        for (int i = 0; i < kDotCount; i++) {
+            UIView *dotView = [[UIView alloc] initWithFrame:CGRectMake((width - kDotCount) / 2 + i * width, (height - 10) / 2, 10, 10)];
+            dotView.backgroundColor = [UIColor blackColor];
+            dotView.layer.cornerRadius = 10/ 2.0f;
+            dotView.clipsToBounds = YES;
+            dotView.hidden = YES; //先隐藏
+            [self addSubview:dotView];
+            //把创建的黑色点加入到数组中
+            [self.pwdIndicatorArr addObject:dotView];
+        }
     }
 }
 

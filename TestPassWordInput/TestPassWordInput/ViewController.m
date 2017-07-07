@@ -8,10 +8,11 @@
 
 #import "ViewController.h"
 
-#import "PasswordFieldView.h"
+#import "PasswordInputView.h"
 
-@interface ViewController ()<PasswordFieldViewDelegate>
+@interface ViewController ()
 
+@property(nonatomic, strong)PasswordInputView *passwordField;
 
 @end
 
@@ -20,27 +21,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    PasswordFieldView *passwordField = [[PasswordFieldView alloc]initWithFrame:CGRectMake(14, 100, 280, 60)];
-    [self.view addSubview:passwordField];
-    
-    
-    [passwordField setDelegate:self];
-    [passwordField becomeResponderViewKeyboard];
+    self.passwordField= [[PasswordInputView alloc]init];
+    [self.view addSubview:self.passwordField];
+    [self.passwordField setButtonBackgroundColor:[UIColor brownColor]];
+    [self.passwordField actionButtonAddTarget:self action:@selector(a)];
     
 }
 
 
--(void)passwordField:(PasswordFieldView *)passwordField password:(NSString *)passwordString{
-
-    NSLog(@"passwordSting : %@", passwordString);
-//    [passwordField resignResponderViewKeyboard];
+-(void)a{
+    
+    NSString *s = [self.passwordField getPassword];
+    
+    NSLog(@"s >> %@",s);
 }
 
--(void)passwordField:(PasswordFieldView *)passwordField didChange:(NSString *)passwordString{
-
-
-     NSLog(@"passwordSting : %@", passwordString);
-}
 
 
 - (void)didReceiveMemoryWarning {
