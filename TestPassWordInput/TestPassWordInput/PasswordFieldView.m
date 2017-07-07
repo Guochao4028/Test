@@ -25,8 +25,8 @@
 -(instancetype)initWithFrame:(CGRect)frame{
     self =  [super initWithFrame:frame];
     if (self != nil) {
-        [self initUI];
         [self initData];
+        [self initUI];
     }
     return self;
 }

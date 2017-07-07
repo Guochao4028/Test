@@ -10,9 +10,13 @@
 
 #import "PasswordInputView.h"
 
-@interface ViewController ()
+#import "PasswordAlertView.h"
 
-@property(nonatomic, strong)PasswordInputView *passwordField;
+@interface ViewController ()<PasswordAlertViewDelegate>
+
+//@property(nonatomic, strong)PasswordInputView *passwordField;
+
+@property(nonatomic, strong)PasswordAlertView *passwordAlertView;
 
 @end
 
@@ -21,20 +25,34 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.passwordField= [[PasswordInputView alloc]init];
-    [self.view addSubview:self.passwordField];
-    [self.passwordField setButtonBackgroundColor:[UIColor brownColor]];
-    [self.passwordField actionButtonAddTarget:self action:@selector(a)];
+//    self.passwordField= [[PasswordInputView alloc]init];
+//    [self.view addSubview:self.passwordField];
+//    [self.passwordField setButtonBackgroundColor:[UIColor brownColor]];
+//    [self.passwordField actionButtonAddTarget:self action:@selector(a)];
+    
+    
+    self.passwordAlertView = [[PasswordAlertView alloc]init];
+    self.passwordAlertView.title = @"请输入支付密码";
+    self.passwordAlertView.message = @"提现";
+    self.passwordAlertView.amount= 10000;
+    [self.passwordAlertView setDelegate:self];
+    [self.view addSubview:self.passwordAlertView];
+    [self.passwordAlertView show];
     
 }
 
 
--(void)a{
-    
-    NSString *s = [self.passwordField getPassword];
-    
-    NSLog(@"s >> %@",s);
+-(void)alertView:(PasswordAlertView *)passwordAlertView getPassword:(NSString *)passwordString{
+
+    NSLog(@"passwordString : %@",passwordString);
 }
+
+//-(void)a{
+//    
+//    NSString *s = [self.passwordField getPassword];
+//    
+//    NSLog(@"s >> %@",s);
+//}
 
 
 
