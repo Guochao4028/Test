@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0B491D7F1F09F0B100A6C804 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 0B491D7E1F09F0B100A6C804 /* main.c */; };
 		0B491D871F0A038F00A6C804 /* fileTool.c in Sources */ = {isa = PBXBuildFile; fileRef = 0B491D851F0A038F00A6C804 /* fileTool.c */; };
+		0B7A23D91F3AC083009520EF /* Test.c in Sources */ = {isa = PBXBuildFile; fileRef = 0B7A23D71F3AC083009520EF /* Test.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		0B491D7E1F09F0B100A6C804 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		0B491D851F0A038F00A6C804 /* fileTool.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fileTool.c; sourceTree = "<group>"; };
 		0B491D861F0A038F00A6C804 /* fileTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fileTool.h; sourceTree = "<group>"; };
+		0B7A23D71F3AC083009520EF /* Test.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Test.c; sourceTree = "<group>"; };
+		0B7A23D81F3AC083009520EF /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 				0B491D7E1F09F0B100A6C804 /* main.c */,
 				0B491D851F0A038F00A6C804 /* fileTool.c */,
 				0B491D861F0A038F00A6C804 /* fileTool.h */,
+				0B7A23D71F3AC083009520EF /* Test.c */,
+				0B7A23D81F3AC083009520EF /* Test.h */,
 			);
 			path = TestC;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B491D7F1F09F0B100A6C804 /* main.c in Sources */,
+				0B7A23D91F3AC083009520EF /* Test.c in Sources */,
 				0B491D871F0A038F00A6C804 /* fileTool.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,6 +260,7 @@
 				0B491D841F09F0B100A6C804 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
