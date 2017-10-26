@@ -16,6 +16,7 @@
 		0B2D6AD21FA1B1120068FEBD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2D6AD11FA1B1120068FEBD /* main.m */; };
 		0B2D6ADC1FA1B1120068FEBD /* TestLoginViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2D6ADB1FA1B1120068FEBD /* TestLoginViewTests.m */; };
 		0B2D6AE71FA1B1120068FEBD /* TestLoginViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2D6AE61FA1B1120068FEBD /* TestLoginViewUITests.m */; };
+		0B2D6AF61FA1B1B30068FEBD /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2D6AF51FA1B1B30068FEBD /* LoginView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		0B2D6AE21FA1B1120068FEBD /* TestLoginViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestLoginViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B2D6AE61FA1B1120068FEBD /* TestLoginViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestLoginViewUITests.m; sourceTree = "<group>"; };
 		0B2D6AE81FA1B1120068FEBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B2D6AF41FA1B1B30068FEBD /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
+		0B2D6AF51FA1B1B30068FEBD /* LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,8 @@
 		0B2D6ABE1FA1B1120068FEBD /* TestLoginView */ = {
 			isa = PBXGroup;
 			children = (
+				0B2D6AF41FA1B1B30068FEBD /* LoginView.h */,
+				0B2D6AF51FA1B1B30068FEBD /* LoginView.m */,
 				0B2D6ABF1FA1B1120068FEBD /* AppDelegate.h */,
 				0B2D6AC01FA1B1120068FEBD /* AppDelegate.m */,
 				0B2D6AC21FA1B1120068FEBD /* ViewController.h */,
@@ -271,6 +276,7 @@
 				0B2D6AC41FA1B1120068FEBD /* ViewController.m in Sources */,
 				0B2D6ACA1FA1B1120068FEBD /* TestLoginView.xcdatamodeld in Sources */,
 				0B2D6AD21FA1B1120068FEBD /* main.m in Sources */,
+				0B2D6AF61FA1B1B30068FEBD /* LoginView.m in Sources */,
 				0B2D6AC11FA1B1120068FEBD /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+- (IBAction)showLoginView:(id)sender;
 
 @end
 
@@ -26,4 +27,6 @@
 }
 
 
+- (IBAction)showLoginView:(id)sender {
+}
 @end
