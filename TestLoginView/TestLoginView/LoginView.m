@@ -19,7 +19,10 @@
 @property(nonatomic, strong)UIView *contentView;
 /*  登录页面（输入手机号，第三个登录，密码登录，验证登录） */
 @property(nonatomic, strong)UIView *loginMainView;
+/*  输入手机号 */
 @property(nonatomic, strong)UITextField *inputPhoneNumberTextField;
+/*  验证登录 */
+@property(nonatomic, strong)UIButton *codeLoginButton;
 /*  显示标题 */
 @property(nonatomic, strong)UIView *loginTitleView;
 
@@ -43,7 +46,7 @@
 }
 
 #pragma mark -
-
+/*  初始化布局 */
 -(void)initUI{
     
     self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.7];
@@ -61,8 +64,7 @@
     
 }
 
-
-
+/*  更新UI */
 -(void)updateUI{
     [self.contentView setFrame:CGRectMake(0, (self.viewHeight - CONTENTVIEW_HEIGHT), self.viewWidth, CONTENTVIEW_HEIGHT)];
 }
@@ -105,20 +107,27 @@
     } completion: nil];
 }
 
+/*  整体点击 */
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
     [self gone];
 }
-
+/*  监听通知 */
 -(void)listenMethods{
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardWillShow:)
                                                  name:UIKeyboardWillShowNotification
                                                object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillHide:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
 }
 
 #pragma mark - 监听事件
+/*  键盘出现 */
 -(void)keyboardWillShow:(NSNotification *)sender{
     CGRect keyboardFrame = [[[sender userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
     CGFloat keyboardHieght = CGRectGetHeight(keyboardFrame);
@@ -126,19 +135,29 @@
     
 }
 
+/*  键盘消失 */
+-(void)keyboardWillHide:(NSNotification *)sender{
+    
+    CGRect keyboardFrame = [[[sender userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    CGFloat keyboardHieght = CGRectGetHeight(keyboardFrame);
+    self.contentView.y += keyboardHieght;
+}
+
+#pragma mark - action
+/*  验证登录 */
+-(void)codeButtonAtion:(UIButton *)sender{}
 
 #pragma mark - getter
-
+/*  整体的宽度 self */
 -(CGFloat )viewWidth{
     _viewWidth = CGRectGetWidth(self.bounds);
     return _viewWidth;
 }
-
+/*  整体的高度 self */
 -(CGFloat )viewHeight{
     _viewHeight = CGRectGetHeight(self.bounds);
     return _viewHeight;
 }
-
 
 -(UIView *)contentView{
     
@@ -159,7 +178,6 @@
     return _loginMainView;
 }
 
-
 -(UITextField *)inputPhoneNumberTextField{
     
     if (_inputPhoneNumberTextField == nil) {
@@ -168,6 +186,17 @@
     }
     
     return _inputPhoneNumberTextField;
+}
+
+-(UIButton  *)codeLoginButton{
+    
+    if (_codeLoginButton == nil) {
+        _codeLoginButton = [UIButton  buttonWithType:UIButtonTypeCustom];
+        [_codeLoginButton setTitle:@"验证登录" forState:UIControlStateNormal];
+        [_codeLoginButton addTarget:self action:@selector(codeButtonAtion:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    
+    return _codeLoginButton;
 }
 
 
