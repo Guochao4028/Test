@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+
+
+
 @interface LoginView : UIView
 
 -(void)show;
+
+-(void)gone;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "LoginView.h"
 
 @interface ViewController ()
 - (IBAction)showLoginView:(id)sender;
@@ -28,5 +29,8 @@
 
 
 - (IBAction)showLoginView:(id)sender {
+    
+    LoginView *login = [[LoginView alloc]init];
+    [login show];
 }
 @end
