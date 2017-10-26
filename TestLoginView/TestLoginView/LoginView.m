@@ -25,9 +25,20 @@
 @property(nonatomic, strong)UIButton *codeLoginButton;
 /*  显示标题 */
 @property(nonatomic, strong)UIView *loginTitleView;
+/*  标题上的文字 */
+@property(nonatomic, strong)UILabel *loginTitleLabel;
+/*  标题上的按钮 */
+@property(nonatomic, strong)UIButton *loginTitleButton;
+
+@property(nonatomic, copy)NSString *titleStirng;
+
+@property(nonatomic, copy)NSString *buttonWordString;
 
 @property(nonatomic, assign)CGFloat viewHeight;
 @property(nonatomic, assign)CGFloat viewWidth;
+
+@property(nonatomic, assign)BOOL isClose;
+
 
 
 @end
@@ -48,20 +59,26 @@
 #pragma mark -
 /*  初始化布局 */
 -(void)initUI{
-    
     self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.7];
     [self addSubview:self.contentView];
-    [self.contentView setFrame:CGRectMake(0, self.viewHeight, self.viewWidth, CONTENTVIEW_HEIGHT)];
-    
+    /*  标题 */
     [self.contentView addSubview:self.loginTitleView];
-    [self.loginTitleView setFrame:CGRectMake(0, 0, self.viewWidth, TITLEVIEW_HEIGHT)];
-    
+    [self.loginTitleView addSubview:self.loginTitleLabel];
+    [self.loginTitleView addSubview:self.loginTitleButton];
+    /*  mainview */
     [self.contentView addSubview:self.loginMainView];
-    [self.loginMainView setFrame:CGRectMake(0, TITLEVIEW_HEIGHT, self.viewWidth, CONTENTVIEW_HEIGHT - TITLEVIEW_HEIGHT)];
-    
     [self.loginMainView addSubview:self.inputPhoneNumberTextField];
+    [self.loginMainView addSubview:self.codeLoginButton];
+    [self updataFrame];
+}
+
+-(void)updataFrame{
+    [self.contentView setFrame:CGRectMake(0, self.viewHeight, self.viewWidth, CONTENTVIEW_HEIGHT)];
+    [self.loginTitleView setFrame:CGRectMake(0, 0, self.viewWidth, TITLEVIEW_HEIGHT)];
+    [self.loginMainView setFrame:CGRectMake(0, TITLEVIEW_HEIGHT, self.viewWidth, CONTENTVIEW_HEIGHT - TITLEVIEW_HEIGHT)];
     [self.inputPhoneNumberTextField setFrame:CGRectMake(0, 10, 120, 50)];
     
+    [self.codeLoginButton setFrame:CGRectMake(0, CGRectGetMaxY(self.inputPhoneNumberTextField.frame) + 12, 150, 50)];
 }
 
 /*  更新UI */
@@ -70,7 +87,6 @@
 }
 
 #pragma mark - methods
-
 /*  显示 */
 -(void)show{
     UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
@@ -145,7 +161,34 @@
 
 #pragma mark - action
 /*  验证登录 */
--(void)codeButtonAtion:(UIButton *)sender{}
+-(void)codeButtonAtion:(UIButton *)sender{
+    
+}
+
+/*  标题上的按钮 */
+-(void)loginTitleButtonAtion:(UIButton *)sender{
+}
+
+#pragma mark - setter
+-(void)setTitleStirng:(NSString *)titleStirng{
+    _titleStirng = titleStirng;
+    
+    [self.loginTitleLabel setText:titleStirng];
+    
+}
+
+-(void)setButtonWordString:(NSString *)buttonWordString{
+    
+    _buttonWordString = buttonWordString;
+    
+    if (buttonWordString == nil) {
+        [self.loginTitleButton setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
+        self.isClose = YES;
+    }else{
+        [self.loginTitleButton setTitle:buttonWordString forState:UIControlStateNormal];
+        self.isClose = NO;
+    }
+}
 
 #pragma mark - getter
 /*  整体的宽度 self */
@@ -194,8 +237,8 @@
         _codeLoginButton = [UIButton  buttonWithType:UIButtonTypeCustom];
         [_codeLoginButton setTitle:@"验证登录" forState:UIControlStateNormal];
         [_codeLoginButton addTarget:self action:@selector(codeButtonAtion:) forControlEvents:UIControlEventTouchUpInside];
+        [_codeLoginButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     }
-    
     return _codeLoginButton;
 }
 
@@ -207,6 +250,25 @@
     }
     
     return _loginTitleView;
+}
+
+-(UILabel *)loginTitleLabel{
+    
+    if (_loginTitleLabel == nil) {
+        _loginTitleLabel = [[UILabel alloc]initWithFrame:CGRectZero];
+    }
+    
+    return _loginTitleLabel;
+}
+
+-(UIButton *)loginTitleButton{
+    
+    if (_loginTitleButton == nil) {
+        _loginTitleButton = [UIButton  buttonWithType:UIButtonTypeCustom];
+        [_loginTitleButton addTarget:self action:@selector(loginTitleButtonAtion:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    
+    return _loginTitleButton;
 }
 
 @end
